@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <title>医对一</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body class="wrap">
+  <nav class="clearfix">
+      <div class="nav">
+          <ul>
+              <li></li>
+          </ul>
+          <ol>
+              <li class="active"><a href="javascript:;">关注公众号</a></li>
+              <li><a href="javascript:;">家门口看好中医</a></li>
+              <li><a href="javascript:;">社区中医服务平台</a></li>
+              <li><a href="javascript:;">关于我们</a></li>
+              <li><a href="javascript:;">联系我们</a></li>
+          </ol>
+      </div>
+  </nav>
+  <div class="empty"></div>
+  <section id="F1">
+      <div class="F1_wrap clearfix">
+          <p><img src="img/yishengduan.png" alt="医生端"/></p>
+          <p><img src="img/huanzheduan.png" alt="患者端"/></p>
+      </div>
+  </section>
+  <section id="F2">
+      <p><img src="img/jiamenkou.png" alt="家门口看好中医"/></p>
+  </section>
+  <section id="F3">
+      <div class="F3_wrap">
+          <h1><img src="img/shequ.png" alt="社区服务平台"/></h1>
+          <dl>
+              <dt>我是医生</dt>
+              <dd>◆ 名家经验技术交流</dd>
+              <dd>◆ 行业间学术推广</dd>
+              <dd>◆ 定制中医职业生涯规划</dd>
+              <dd>◆ 建立自己的病历库</dd>
+              <dd>信任</dd>
+          </dl>
+          <dl>
+              <dt>我是患者</dt>
+              <dd>◆ 快速联系医生</dd>
+              <dd>◆ 找到家门口的好中医</dd>
+              <dd>◆ 预约就诊</dd>
+              <dd>◆ 建立自己的健康档案</dd>
+              <dd>便捷</dd>
+          </dl>
+          <dl>
+              <dt>我是医院管理者</dt>
+              <dd>◆ 医院/科室品牌传播与增值</dd>
+              <dd>◆ 协助中医医联体落地</dd>
+              <dd>◆ 中医“治未病”体系化建设</dd>
+              <dd>◆ 提升各项公卫工作效率</dd>
+              <dd>◆ 实时数据反馈与统计分析</dd>
+              <dd>高品质</dd>
+          </dl>
+      </div>
+  </section>
+  <section id="F4">
+      <h1><img src="img/guanyu.png" alt="关于我们"/></h1>
+      <p>利用中医+互联网技术，致力于为社会、医生、医院构建一对一的熟人医患中医服务平台，传承发扬中医药文化，全面提升社区卫生服务中心中医服务能力，使每个居民都能享受到便捷、信任、高品质的社区中医服务。以科技创新助力分级诊疗、中医“治未病”、中医慢病管理等医疗服务管理模式的变革和创新，改善国人中医健康服务质量，同步实现提升社区中医服务能力与减少中国民众患病率的目标。</p>
+      <p>医对一的使命：提升社区中医服务能力，建立一对一的熟人医患社区中医服务平台。</p>
+      <p>医对一的愿景：让每个居民都能享受到便捷、信任、高品质的社区中医服务。</p>
+  </section>
+  <section id="F5">
+      <div class="F5_wrap">
+          <h1><img src="img/lianxi.png" alt="联系我们"/></h1>
+          <div class="foot">
+              <p><i></i>400-876-2121</p>
+              <p><i></i>北京市海淀区中关村南大街甲56号方圆公寓B座1303</p>
+              <p><i></i>info@ys121.cn</p>
+          </div>
+      </div>
+  </section>
+</body>
+<script>
+    var $navList = $('nav ol li');
+    var turnOff =true;
+    $navList.click(function(){
+        turnOff = false;
+        var _index = $navList.index($(this));
+        changeClass(_index);
+        var wH = $('section').eq($(this).index()).offset().top-116;
+        $('body,html').animate({'scrollTop':wH},500,function(){
+          turnOff = true;
+        });
+    });
+    $(document).scroll(function () {
+        if (!turnOff)return;
+        var oTop = $(this).scrollTop();
+        if(oTop==0)changeClass(0);
+        if(oTop>=596 && oTop<=1191)changeClass(1);
+        if(oTop>=1192 && oTop<=1779)changeClass(2);
+        if(oTop>=1788 && oTop<=1900)changeClass(3);
+        if(oTop>1900)changeClass(4);
+    });
+
+    function changeClass(index){
+      var $li = $('ol li');
+      $li.removeClass();
+      $li.eq(index).addClass('active');
+    }
+</script>
+</html>

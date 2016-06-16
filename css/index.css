@@ -1,0 +1,142 @@
+nav{
+    width: 100%;
+    position: fixed;
+    top:0;
+    z-index: 222;
+    background: #eae7e0;
+}
+.nav{
+    width: 1000px;
+    margin: 0 auto;
+    height: 116px;
+    line-height: 116px;
+    color: #8d8e5f;
+}
+.nav ul{
+    float: left;
+}
+.nav ul li{
+    width: 160px;
+    height: 50px;
+    margin-top: 30px;
+    overflow: hidden;
+    background: url("../img/logo.png") no-repeat;
+    background-size: contain;
+}
+.nav ol{
+    float: right;
+}
+.nav ol li{
+    float: left;
+    font-size: 20px;
+    margin-left: 44px;
+}
+.active a{
+    color: #75161a;
+}
+.empty{
+    height: 116px;
+}
+#F1,#F3,#F5{
+    height: 596px;
+    background: #d2ccaa;
+    overflow: hidden;
+}
+.F1_wrap,.F3_wrap,.F5_wrap{
+    width: 1000px;
+    margin: 0 auto;
+}
+.F1_wrap p{
+    float: left;
+    width: 50%;
+    line-height: 596px;
+    text-align: center;
+}
+.F1_wrap p img{
+    vertical-align: middle;
+}
+#F2,#F4{
+    height: 596px;
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#F2 p{
+    line-height: 596px;
+    width: 100%;
+    text-align: center;
+}
+#F2 p img{
+    vertical-align: middle;
+}
+.F3_wrap h1,#F4 h1,.F5_wrap h1{
+    width: 100%;
+    text-align: center;
+    margin: 78px 0;
+}
+.F3_wrap dl{
+    width: 33.33%;
+    float: left;
+    text-indent: 80px;
+    position: relative;
+}
+.F3_wrap dl dt{
+    font-size: 26px;
+    color: #75161a;
+    padding-bottom: 22px;
+}
+.F3_wrap dl dd{
+    font-size: 16px;
+    color: #1d0300;
+    line-height: 30px;
+    white-space:nowrap;
+}
+.F3_wrap dl dd:nth-last-child(1){
+    position: absolute;
+    bottom:-100px;
+    left: 28%;
+    border: 1px solid #a47163;
+    text-indent: 0;
+    width: 150px;
+    text-align: center;
+}
+.F3_wrap dl:nth-last-child(1) dd{
+    bottom:-70px;
+}
+#F4 p{
+    font-size: 16px;
+    color: #5e5c59;
+    line-height: 28px;
+    text-align: center;
+}
+#F4 p:first-of-type{
+    margin-bottom: 76px;
+}
+#F5{
+    height: 400px;
+}
+.foot{
+    width: 100%;
+}
+.foot p{
+    width: 30%;
+    float: left;
+    text-align: center;
+}
+.foot p:nth-of-type(2){
+    width: 40%;
+}
+.foot i{
+    width: 41px;
+    height: 41px;
+    display: block;
+    margin: 0 auto 20px;
+    background: url("../img/foot.png") no-repeat;
+}
+.foot p:nth-of-type(2) i{
+    background-position: 0 -53px;
+}
+.foot p:nth-of-type(3) i{
+    background-position: 0 -106px;
+}
+
